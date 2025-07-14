@@ -23,7 +23,6 @@ public:
     double getlgt();
     void setendereço(std::string endereço);
     void setpreço(double preço);
-    void exibirinfo();
     int getid();
 };
 
