@@ -22,7 +22,6 @@ public:
     double getlat();
     void setlgt(double lgt1);
     double getlgt();
-    void exibirinfo();
     int getid();
    
 };
