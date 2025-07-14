@@ -43,13 +43,3 @@ void Imovel::setpreco(double preco){
 int Imovel::getid(){
     return id;
 }
-
-void Imovel::exibirinfo(){
-    cout << "tipo: " << tipo << endl;
-    cout << "proprietario_id: " << proprietario_id << endl;
-    cout << "lat: " << lat << endl;
-    cout << "lgt: " << lgt << endl;
-    cout << "endereço: " << endereco << endl;
-    cout << "preço: " << preco << endl;
-    cout << "id: " << id << endl;
-}
