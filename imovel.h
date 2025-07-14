@@ -10,8 +10,8 @@ private:
     std::string tipo;
     double lat;
     double lgt;
-    std::string endereço;
-    double preço;
+    std::string endereco;
+    double preco;
 
 public:
     Imovel();
@@ -21,8 +21,9 @@ public:
     double getlat();
     void setlgt(double lgt2);
     double getlgt();
-    void setendereço(std::string endereço);
-    void setpreço(double preço);
+    void setendereco(std::string endereco);
+    void setpreco(double preco);
+    void exibirinfo();
     int getid();
 };
 
