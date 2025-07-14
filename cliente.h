@@ -13,7 +13,6 @@ public:
     Cliente();
     void setnome(std::string nome2);
     void settelefone(std::string telefone2);
-    void exibirinfo();
 
 };
 
