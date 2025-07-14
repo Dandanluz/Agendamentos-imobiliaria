@@ -43,13 +43,3 @@ double Corretor::getlgt(){
 int Corretor::getid(){
     return id;
 }
-
-void Corretor::exibirinfo(){
-    cout << "nome: "  << nome << endl;
-    cout << "avaliador: " << avaliador << endl;
-    cout << "telefone: " << telefone << endl;
-    cout << "lat: " << lat << endl;
-    cout << "lgt: " << lgt << endl; 
-    cout << "id: " << id << endl;
-
-}
