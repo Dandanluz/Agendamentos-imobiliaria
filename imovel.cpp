@@ -1,4 +1,5 @@
 #include "imovel.h"
+#include <iostream>
 using namespace std;
 
 int Imovel::nextId = 1;
@@ -31,14 +32,24 @@ double Imovel::getlgt(){
     return lgt;
 }
 
-void Imovel::setendereço(string endereço){
-    this->endereço = endereço;
+void Imovel::setendereco(string endereco){
+    this->endereco = endereco;
 }
 
-void Imovel::setpreço(double preço){
-    this->preço = preço;
+void Imovel::setpreco(double preco){
+    this->preco = preco;
 }
 
 int Imovel::getid(){
     return id;
+}
+
+void Imovel::exibirinfo(){
+    cout << "tipo: " << tipo << endl;
+    cout << "proprietario_id: " << proprietario_id << endl;
+    cout << "lat: " << lat << endl;
+    cout << "lgt: " << lgt << endl;
+    cout << "endereço: " << endereco << endl;
+    cout << "preço: " << preco << endl;
+    cout << "id: " << id << endl;
 }
