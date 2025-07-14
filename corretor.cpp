@@ -1,5 +1,4 @@
 #include "corretor.h"
-#include <iostream>
 using namespace std;
 
 int Corretor::nextId = 1;
