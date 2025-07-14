@@ -1,19 +1,30 @@
 #ifndef CORRETOR_H
-#define CORRETOR_H
-#include <iostream>
+#define CORREOR_H
 #include <string>
 
-using namespace std;
-
 class Corretor{
-    public:
-        static int nextId;
-        int id;
-        std::string nome;
-        std::string telefone;
-        bool avaliador;
-        double lat, lon;
+private:
+    static int nextId;
+    int id;
+    std::string nome;
+    std::string telefone;
+    int avaliador;
+    double lat;
+    double lgt;
 
-        Corretor(const string &telefone, bool avaliador, double lat, double lon, const string &nome);
-    };
+public:
+    Corretor();
+    void setnome(std::string nome1);
+    void settelefone(std::string telefone1);
+    void setavaliador(int avaliador);
+    int getavaliador();
+    void setlat(double lat1);
+    double getlat();
+    void setlgt(double lgt1);
+    double getlgt();
+    void exibirinfo();
+    int getid();
+   
+};
+
 #endif
