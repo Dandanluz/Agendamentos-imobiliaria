@@ -24,13 +24,6 @@ double haversine(double lat1, double lon1, double lat2, double lon2) {
     return EARTH_R * c;
 }
 
-template <typename T>
-void exibir(vector<T*>& elementos){
-    for(T* elem : elementos){
-        elem->exibirinfo();
-    }
-}
-
 int main(){
     //classe corretor
     int ncorretores, avaliador;
@@ -53,7 +46,7 @@ int main(){
         if (c.getavaliador() == 1) {
             avaliadores.push_back(c);
         }
-    } //exibir(avaliadores);
+    }
 
     //classe cliente
     int nclientes;
@@ -71,7 +64,7 @@ int main(){
         cl.settelefone(telefone2);
         clientes.push_back(cl);
         
-    } //exibir(clientes);
+    }
 
     //classe imoveis
     int nimoveis, proprietario_id;
@@ -95,7 +88,7 @@ int main(){
         im.setpreco(preco);
         imoveis.push_back(im);
      
-    } //exibir(imoveis);
+    }
 
     //ordena imoveis por id
     sort(imoveis.begin(), imoveis.end(), [](Imovel a, Imovel b){
