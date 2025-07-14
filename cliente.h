@@ -1,18 +1,20 @@
 #ifndef CLIENTE_H
 #define CLIENTE_H
-#include<iostream>
 #include <string>
 
-using namespace std;
-
 class Cliente{
-    public:
-        static int nextId;
-        int id;
-        std::string nome;
-        std::string telefone;
+private:
+    static int nextId;
+    int id;
+    std::string nome;
+    std::string telefone;
+    
+public:
+    Cliente();
+    void setnome(std::string nome2);
+    void settelefone(std::string telefone2);
+    void exibirinfo();
 
-        Cliente(const std::string &telefone, const std::string &nome);
 };
 
 #endif
