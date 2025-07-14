@@ -12,7 +12,7 @@ using namespace std;
 
 constexpr double EARTH_R = 6371.0; // Raio da Terra em km
 
-double haversine(double lat1, double lon1, double lat2, double lon2) {
+double haversine(double lat1, double lon1, double lat2, double lon2){
     auto deg2rad = [](double d){ return d * M_PI / 180.0; };
     double dlat = deg2rad(lat2 - lat1);
     double dlon = deg2rad(lon2 - lon1);
@@ -21,13 +21,6 @@ double haversine(double lat1, double lon1, double lat2, double lon2) {
                std::pow(std::sin(dlon/2), 2);
     double c = 2 * std::atan2(std::sqrt(a), std::sqrt(1 - a));
     return EARTH_R * c;
-}
-
-template <typename T>
-void exibir(vector<T*>& elementos){
-    for(T* elem : elementos){
-        elem->exibirinfo();
-    }
 }
 
 int main(){
@@ -49,10 +42,10 @@ int main(){
         c.setavaliador(avaliador);
         c.setlat(lat1);
         c.setlgt(lgt1);
-        if (c.getavaliador() == 1) {
+        if (c.getavaliador() == 1){
             avaliadores.push_back(c);
         }
-    } //exibir(avaliadores);
+    } 
 
     //classe cliente
     int nclientes;
@@ -70,7 +63,7 @@ int main(){
         cl.settelefone(telefone2);
         clientes.push_back(cl);
         
-    } //exibir(clientes);
+    }
 
     //classe imoveis
     int nimoveis, proprietario_id;
@@ -94,7 +87,7 @@ int main(){
         im.setpreço(preço);
         imoveis.push_back(im);
      
-    } //exibir(imoveis);
+    }
 
     //ordena imoveis por id
     sort(imoveis.begin(), imoveis.end(), [](Imovel a, Imovel b){
@@ -111,7 +104,7 @@ int main(){
     }
 
     //for para os corretores
-    for (size_t i = 0; i < avaliadores.size(); ++i) {
+    for (size_t i = 0; i < avaliadores.size(); ++i){
         Corretor corretor = avaliadores[i];
         vector<Imovel>& lista = distribuidos[i];
 
@@ -124,15 +117,15 @@ int main(){
         cout << "Corretor " << corretor.getid() << endl;
 
         //for para os imoveis
-        for (size_t j = 0; j < lista.size(); ++j) {
+        for (size_t j = 0; j < lista.size(); ++j){
             int prox = -1;
             double min_dist = 1e9;
 
             //encontrar imóvel mais próximo
-            for (size_t k = 0; k < lista.size(); ++k) {
-                if (!visitado[k]) {
+            for (size_t k = 0; k < lista.size(); ++k){
+                if (!visitado[k]){
                     double dist = haversine(curr_lat, curr_lgt, lista[k].getlat(), lista[k].getlgt());
-                    if (dist < min_dist) {
+                    if (dist < min_dist){
                         min_dist = dist;
                         prox = static_cast<int>(k);
                     }
@@ -146,7 +139,7 @@ int main(){
             //calcular tempo de deslocamento
             double tempo_deslocamento = min_dist * 2;
             minuto += static_cast<int>(tempo_deslocamento);
-            while (minuto >= 60) {
+            while (minuto >= 60){
                 minuto -= 60;
                 hora += 1;
             }
@@ -163,7 +156,7 @@ int main(){
 
         }
         //linha em branco entre corretores
-        if (i + 1 < avaliadores.size()) {
+        if (i + 1 < avaliadores.size()){
             cout << '\n'; 
         }
     }
