@@ -23,7 +23,6 @@ public:
     double getlgt();
     void setendereco(std::string endereco);
     void setpreco(double preco);
-    void exibirinfo();
     int getid();
 };
 
